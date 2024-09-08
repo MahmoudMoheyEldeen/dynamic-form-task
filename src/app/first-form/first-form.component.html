@@ -1,3 +1,41 @@
+<!-- <form [formGroup]="form" (ngSubmit)="submit()">
+  <div>
+    <label>ID</label>
+    <input formControlName="ID" type="text" />
+  </div>
+
+  <div formArrayName="addressDetail">
+    <div *ngFor="let addressGroup of getAddressDetailArray().controls; let i = index" [formGroupName]="i">
+      <label>Street</label>
+      <input formControlName="street" type="text" />
+
+      <label>Zip Code</label>
+      <input formControlName="zipCode" type="number" />
+
+      <label>Building No</label>
+      <input formControlName="buildingNo" type="number" />
+
+      <button type="button" (click)="addAddressEntry()">Add Another Address</button>
+    </div>
+  </div>
+
+  <div>
+    <label>Student Name</label>
+    <input formControlName="StudentName" type="text" />
+  </div>
+
+  <div formArrayName="phoneNumbers">
+    <div *ngFor="let phoneControl of getPhoneNumbersArray().controls; let i = index">
+      <label>Phone Number {{ i + 1 }}</label>
+      <input [formControlName]="i" type="text" />
+    </div>
+    <button type="button" (click)="addMultiField('phoneNumbers')">Add Another Phone Number</button>
+  </div>
+
+  <button type="submit">Submit</button>
+</form> -->
+
+
 <div class="container-fluid">
   <div class="row go-back-row  px-2">
     <i [ngClass]="{
@@ -16,7 +54,7 @@
         <div class="title mx-3 pt-1">
           <p style="font-size: 22px; font-weight: 600;">
 
-            {{'الأستمارة الأولي'|transloco}}</p>
+            {{'الأستمارة الثانية'|transloco}}</p>
         </div>
       </div>
       <div class="line-under-title mt-3" style="width: 100%; height: .2em;background-color: #FCFCFC;">
@@ -26,16 +64,66 @@
         [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
 
         {{'قم بإدخال تفاصيل استمارة الموافقة'|transloco}}</div>
-      <div class="row first-input-autor px-5 mt-3" [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'المؤلف'|transloco}}</label>
-          <select class="form-control pl-5" style="height: 2em;" aria-label="Search">
-            <option value="" disabled selected>{{'اختر'|transloco}}</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
 
+
+
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div>
+          <label>ID</label>
+          <input formControlName="ID" type="text" />
+        </div>
+
+        <div formArrayName="addressDetail">
+          <div *ngFor="let addressGroup of getAddressDetailArray().controls; let i = index" [formGroupName]="i">
+            <label>Street</label>
+            <input formControlName="street" type="text" />
+
+            <label>Zip Code</label>
+            <input formControlName="zipCode" type="number" />
+
+            <label>Building No</label>
+            <input formControlName="buildingNo" type="number" />
+
+            <button type="button" (click)="addAddressEntry()">Add Another Address</button>
+          </div>
+        </div>
+
+        <div>
+          <label>Student Name</label>
+          <input formControlName="StudentName" type="text" />
+        </div>
+
+        <div formArrayName="phoneNumbers">
+          <div *ngFor="let phoneControl of getPhoneNumbersArray().controls; let i = index">
+            <label>Phone Number {{ i + 1 }}</label>
+            <input [formControlName]="i" type="text" />
+          </div>
+          <button type="button" (click)="addMultiField('phoneNumbers')">Add Another Phone Number</button>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+
+
+
+
+
+
+      <!-- <div class="row first-input-autor px-5 mt-3" [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
+        <div formArrayName="addressDetail">
+          <div *ngFor="let addressGroup of getAddressDetailArray().controls; let i = index" [formGroupName]="i">
+            <label>Street</label>
+            <input formControlName="street" type="text" />
+
+            <label>Zip Code</label>
+            <input formControlName="zipCode" type="number" />
+
+            <label>Building No</label>
+            <input formControlName="buildingNo" type="number" />
+
+            <button type="button" (click)="addAddressEntry()">Add Another Address</button>
+          </div>
         </div>
         <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
           <label class="mb-0" for="">*{{'المراجع'|transloco}}</label>
@@ -93,7 +181,7 @@
             {{'حفظ كمسودة'|transloco}}</button>
           <button class="cancel mx-1" (click)="trySweetalert()">{{'إلغاء'|transloco}}</button>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
