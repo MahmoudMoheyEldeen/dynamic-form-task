@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
   constructor(private languageService: LanguageServiceService) {
     this.languageService.selectedLanguage$.subscribe((lang) => {
       this.currentLanguage = lang;
-      console.log('from business component', this.currentLanguage);
+      console.log('from formOne component', this.currentLanguage);
     }); /////to get observable  object
   }
 

@@ -1,11 +1,14 @@
 import { Routes } from '@angular/router';
+import { FirstFormComponent } from './first-form/first-form.component';
+import { SecondFormComponent } from './second-form/second-form.component';
 
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('../app/works-effects/works-effects.module').then(
-        (m) => m.WorksEffectsModule
-      ),
+    component: FirstFormComponent,
+  },
+  {
+    path: 'second-form',
+    component: SecondFormComponent,
   },
 ];
