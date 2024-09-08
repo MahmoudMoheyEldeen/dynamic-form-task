@@ -1,0 +1,93 @@
+.sidebar-div {
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px rgb(198, 198, 198);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 95vh;
+  transition: all 0.8s ease;
+
+
+
+  &.sidebar-div.collapsed {
+    // transform: translateX(220px);
+    overflow: hidden;
+
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+
+    &.sidebar-div.collapsed ul {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    li {
+      text-align: right;
+      cursor: pointer;
+      padding: 5px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: #f2edf5;
+        border-radius: 5px;
+
+        .fa-arrow-left-long {
+          visibility: visible;
+        }
+      }
+
+      .fa-arrow-left-long {
+        visibility: hidden;
+      }
+
+      a {
+        font-size: 15px;
+        color: black;
+
+        &.english-dir {
+          font-size: 12px; //// translate english
+        }
+
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .icon-container {
+        padding: 2px 5px;
+        border-radius: 2px;
+        background-color: white;
+      }
+    }
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    transition: all .02s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+
+}
+
+
+.sidebar-div.collapsed .logo-div {
+  justify-content: center;
+}
+
+.sidebar-div.collapsed .line-under-title {
+  display: none;
+}

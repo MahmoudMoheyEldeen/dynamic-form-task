@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #5B008A;
+  --secondary-color: #fcfcfc;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.fa-solid,
+.fa-regular,
+.fa,
+.fa-light {
+  color: #5B008A;
+}
+
+input {
+  direction: rtl;
+
+  &::placeholder {
+    text-align: left;
+  }
+}
