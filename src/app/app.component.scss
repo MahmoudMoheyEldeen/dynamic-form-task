@@ -1,9 +1,10 @@
 .all-content {
-  height: 100vh;
-  width: 100vw;
+  // min-height: 100vh;
+  max-width: 100vw;
   margin: auto;
   background-color: #fcfcfc;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .isCollapsed {
@@ -18,6 +19,7 @@
 
 .main-content {
   transition: all .8s ease-in-out;
+  background-color: red;
 }
 
 .header-mainContent {

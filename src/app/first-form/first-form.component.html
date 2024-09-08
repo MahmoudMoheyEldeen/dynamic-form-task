@@ -36,7 +36,7 @@
 </form> -->
 
 
-<div class="container-fluid">
+<div class="form-container container-fluid">
   <div class="row go-back-row  px-2">
     <i [ngClass]="{
       'fa-arrow-left-long mr-auto': currentLanguage === 'en',
@@ -45,7 +45,7 @@
 
   </div>
   <div class="approval-document-row d-flex justify-content-center mt-1">
-    <div class="approval-document-div d-flex flex-column px-4 ">
+    <div class="approval-document-div d-flex flex-column px-4 mb-4">
       <div class="row-approval-doc-title d-flex mt-2"
         [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
         <div class="icon">
@@ -68,40 +68,79 @@
 
 
       <form [formGroup]="form" (ngSubmit)="submit()">
-        <div>
-          <label>ID</label>
-          <input formControlName="ID" type="text" />
+        <div class="row">
+          <div class="col-3 px-2">
+            <div>
+              <label>ID</label>
+              <input class="form-control" formControlName="ID" type="text" />
+            </div>
+          </div>
+          <div class="col-9 px-2">
+            <div>
+              <label>Student Name</label>
+              <input class="form-control" formControlName="StudentName" type="text" />
+            </div>
+          </div>
+
         </div>
 
-        <div formArrayName="addressDetail">
-          <div *ngFor="let addressGroup of getAddressDetailArray().controls; let i = index" [formGroupName]="i">
-            <label>Street</label>
-            <input formControlName="street" type="text" />
+        <div class="mt-3" formArrayName="addressDetail">
+          <div class="row d-flex" *ngFor="let addressGroup of getAddressDetailArray().controls; let i = index"
+            [formGroupName]="i">
+            <div class="col-lg-4 px-2">
+              <div>
+                <label>Street</label>
+                <input class="form-control" formControlName="street" type="text" />
+              </div>
+            </div>
+            <div class="col-lg-4 px-2">
+              <div>
+                <label>Zip Code</label>
+                <input class="form-control" formControlName="zipCode" type="number" />
+              </div>
+            </div>
+            <div class="col-lg-4 px-2">
+              <div>
+                <label>Building No</label>
+                <input class="form-control" formControlName="buildingNo" type="number" />
+              </div>
+            </div>
 
-            <label>Zip Code</label>
-            <input formControlName="zipCode" type="number" />
+            <!-- <button type="button" (click)="addAddressEntry()">Add Another Address</button> -->
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center my-3">
+          <div class="col-4 d-flex justify-content-center">
+            <button class="btn-success" type="button" (click)="addAddressEntry()">Add Another Address</button>
 
-            <label>Building No</label>
-            <input formControlName="buildingNo" type="number" />
-
-            <button type="button" (click)="addAddressEntry()">Add Another Address</button>
           </div>
         </div>
 
-        <div>
-          <label>Student Name</label>
-          <input formControlName="StudentName" type="text" />
-        </div>
+        <!-- <div class="row">
+          <div>
+            <label>Student Name</label>
+            <input class="form-control" formControlName="StudentName" type="text" />
+          </div>
+        </div> -->
 
         <div formArrayName="phoneNumbers">
-          <div *ngFor="let phoneControl of getPhoneNumbersArray().controls; let i = index">
+          <div class=" mt-3" *ngFor="let phoneControl of getPhoneNumbersArray().controls; let i = index">
+
             <label>Phone Number {{ i + 1 }}</label>
-            <input [formControlName]="i" type="text" />
+            <input class="form-control" [formControlName]="i" type="text" />
+
           </div>
-          <button type="button" (click)="addMultiField('phoneNumbers')">Add Another Phone Number</button>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center my-3">
+          <div class="col-4 d-flex justify-content-center">
+            <button class="btn-success" type="button" (click)="addMultiField('phoneNumbers')">Add Another Phone
+              Number</button>
+          </div>
         </div>
 
-        <button type="submit">Submit</button>
+        <div class="d-flex mb-3">
+          <button class="btn-primary" type="submit">Submit</button>
+        </div>
       </form>
 
 
