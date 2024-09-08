@@ -22,7 +22,8 @@
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
       </div>
       <div class="d-flex">
-        <a href="" class="mx-2" [class.english-dir]="currentLanguage=='en'"> 1{{'استمارة'|transloco}}</a>
+        <a [routerLink]="['/first-form']" class="mx-2" [class.english-dir]="currentLanguage=='en'">
+          1{{'استمارة'|transloco}}</a>
         <div class="icon-container">
           <i class="fa-solid fa-tv"></i>
         </div>
@@ -33,7 +34,8 @@
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
       </div>
       <div class="d-flex">
-        <a href="" class="mx-2" [class.english-dir]="currentLanguage=='en'">2{{'استمارة'|transloco}}</a>
+        <a [routerLink]="['/second-form']" routerLinkActive="router-link-active" routerLinkActive="router-link-active"
+          class="mx-2" [class.english-dir]="currentLanguage=='en'">2{{'استمارة'|transloco}}</a>
         <div class="icon-container">
           <i class="fa-regular fa-newspaper"></i>
         </div>

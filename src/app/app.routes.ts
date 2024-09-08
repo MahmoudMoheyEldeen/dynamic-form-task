@@ -5,6 +5,11 @@ import { SecondFormComponent } from './second-form/second-form.component';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'first-form',
+    pathMatch: 'full',
+  },
+  {
+    path: 'first-form',
     component: FirstFormComponent,
   },
   {
