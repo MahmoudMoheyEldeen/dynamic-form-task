@@ -1,100 +1,88 @@
-<div class="container-fluid">
-  <div class="row go-back-row  px-2">
-    <i [ngClass]="{
-      'fa-arrow-left-long mr-auto': currentLanguage === 'en',
-      'fa-arrow-right-long ml-auto': currentLanguage === 'ar'
-    }" class="fa-solid " style="color: black ; font-size: 2em; font-weight: 600;"></i>
-
-  </div>
-  <div class="approval-document-row d-flex justify-content-center mt-1">
-    <div class="approval-document-div d-flex flex-column px-4 ">
-      <div class="row-approval-doc-title d-flex mt-2"
-        [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="icon">
-          <i class="fa-solid fa-file-signature" style="font-size: 30px;"></i>
-        </div>
-        <div class="title mx-3 pt-1">
-          <p style="font-size: 22px; font-weight: 600;">
-
-            {{'الأستمارة الثانية'|transloco}}</p>
-        </div>
-      </div>
-      <div class="line-under-title mt-3" style="width: 100%; height: .2em;background-color: #FCFCFC;">
-
-      </div>
-      <div class="row enter-details-title mt-2 px-5" style="direction: rtl; font-size: 20px;"
-        [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-
-        {{'قم بإدخال تفاصيل استمارة الموافقة'|transloco}}</div>
-      <div class="row first-input-autor px-5 mt-3" [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'المؤلف'|transloco}}</label>
-          <select class="form-control pl-5" style="height: 2em;" aria-label="Search">
-            <option value="" disabled selected>{{'اختر'|transloco}}</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-
-        </div>
-        <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'المراجع'|transloco}}</label>
-          <select class="form-control pl-5" style="height: 2em;" aria-label="Search">
-            <option value="" disabled selected>{{'اختر'|transloco}}</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-
-        </div>
-      </div>
-      <div class="row second-input px-5 mt-4" [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'الوافق'|transloco}}</label>
-          <select class="form-control pl-5" style="height: 2em;" aria-label="Search">
-            <option value="" disabled selected>{{'اختر'|transloco}}</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-
-        </div>
-        <div class="col-lg-6" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'الحالة'|transloco}}</label>
-          <select class="form-control pl-5" style="height: 2em;" aria-label="Search">
-            <option value="" disabled selected>{{'اختر'|transloco}}</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-
-        </div>
-      </div>
-      <div class="row third-input px-5 mt-4 mb-5" [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="col-lg-3" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'تاريخ المراجعة الأخيرة'|transloco}}</label>
-          <input class="form-control pl-5" style="height: 2em;" type="date" aria-label="Search">
-
-
-        </div>
-        <div class="col-lg-3" [ngStyle]="{ 'text-align': currentLanguage==='en' ? 'left' : 'right' }">
-          <label class="mb-0" for="">*{{'تاريخ المراجعة القادم'|transloco}}</label>
-          <input class="form-control pl-5" style="height: 2em;" type="date" aria-label="Search">
-
-        </div>
-      </div>
-      <div class="row  row-for-buttons mt-auto mb-4 mt-5 mx-2"
-        [ngStyle]="{ 'direction': currentLanguage==='en' ? 'ltr' : 'rtl' }">
-        <div class="col-md-6 d-flex   px-0">
-          <button class="save" (click)="trySweetalert()">{{'حفظ'|transloco}}</button>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end px-0">
-          <button class="draft mx-1" (click)="trySweetalert()">
-            {{'حفظ كمسودة'|transloco}}</button>
-          <button class="cancel mx-1" (click)="trySweetalert()">{{'إلغاء'|transloco}}</button>
-        </div>
-      </div>
+<div class=" form-div">
+  <div class="form-container container-fluid" [ngStyle]="{'direction':currentLanguage=='en'?'ltr':'rtl'}">
+    <div class="row go-back-row  px-2">
+      <i [ngClass]="{
+        'fa-arrow-left-long mr-auto': currentLanguage === 'en',
+        'fa-arrow-right-long ml-auto': currentLanguage === 'ar'
+      }" class="fa-solid " style="color: black; font-size: 2em; font-weight: 600;"></i>
     </div>
 
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <!-- Class ID and Inputter in the same row -->
+      <div class="row mt-3">
+        <div class="col-2">
+          <label>{{'Class ID' | transloco}}</label>
+          <input class="form-control" formControlName="ID" type="text" />
+        </div>
+        <div class="col-10">
+          <label>{{'Inputter' | transloco}}</label>
+          <input class="form-control" formControlName="inputter" type="text" />
+        </div>
+      </div>
+
+      <!-- Students Section -->
+      <div formArrayName="student">
+        <div class="student-section mt-4" *ngFor="let studentGroup of getStudentsArray().controls; let i = index"
+          [formGroupName]="i">
+          <!-- Student Number and Name -->
+          <div class="row">
+            <div class="col-12 mt-2 mb-4">
+              <button class="btn-danger" style="width: 5rem;" (click)="removeStudent(i)">X</button>
+            </div>
+            <div class="col-2">
+              <label>{{'Student Number' | transloco}}</label>
+              <input class="form-control" formControlName="studentNo" type="text" />
+            </div>
+            <div class="col-10">
+              <label>{{'Student Name' | transloco}}</label>
+              <input class="form-control" formControlName="studentName" type="text" />
+            </div>
+          </div>
+
+          <!-- Contact Details -->
+          <div formArrayName="student$contactDetail">
+            <div class="row " *ngFor="let contactGroup of getContactDetailArray(i).controls; let j = index"
+              [formGroupName]="j">
+              <div class="col-5">
+                <label>{{'Contact Number' | transloco}}</label>
+                <input class="form-control" formControlName="contactNumber" type="text" />
+              </div>
+              <div class="col-5">
+                <label>{{'Relation' | transloco}}</label>
+                <input class="form-control" formControlName="relation" type="text" />
+              </div>
+
+              <div class="col-2 mt-4 pt-1">
+                <div>
+                  <button class="btn-danger" (click)="removeContactDetail(i, j)">
+                    <p style="font-size: 12px;">{{'Remove Contact' |
+                      transloco}}</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Contact Button -->
+          <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-center">
+              <button class="btn-success" (click)="addContactDetail(i)">{{'Add Contact Detail' | transloco}}</button>
+            </div>
+          </div>
+
+          <div class="row hr-line my-4" style="border:1px solid rgba(128, 128, 128, 0.282); height:1px"></div>
+        </div>
+      </div>
+
+      <!-- Add Student Button -->
+      <div class="row mt-4  mb-5">
+        <div class="col-6 d-flex justify-content-start align-items-center">
+          <button class="btn-success" (click)="addStudent()">{{'Add Student' | transloco}}</button>
+        </div>
+        <div class="col-6 mb-4">
+          <button class="btn-primary" type="submit">{{'Submit' | transloco}}</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

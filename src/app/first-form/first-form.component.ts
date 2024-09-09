@@ -70,10 +70,9 @@ export class FirstFormComponent implements OnInit {
     this.buildForm();
   }
 
-  // Build the main form
   buildForm(): void {
     this.form = this.fb.group({
-      ID: this.fb.control('', Validators.required),
+      ID: this.fb.control('', Validators.required), //to enter id
       addressDetail: this.fb.array([]),
       StudentName: this.fb.control('', Validators.required),
       phoneNumbers: this.fb.array([this.fb.control('')]),
