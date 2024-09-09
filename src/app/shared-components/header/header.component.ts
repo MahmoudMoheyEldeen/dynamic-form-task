@@ -6,11 +6,12 @@ import {
   TranslocoService,
 } from '@jsverse/transloco';
 import { LanguageServiceService } from '../../services/language-service.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslocoDirective, TranslocoPipe, FormsModule],
+  imports: [TranslocoDirective, TranslocoPipe, FormsModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
