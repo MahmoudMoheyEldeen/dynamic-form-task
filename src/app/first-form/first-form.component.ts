@@ -134,7 +134,6 @@ export class FirstFormComponent implements OnInit {
     this.getPhoneNumbersArray().removeAt(index);
   }
 
-  // Handle form submission
   submit(): void {
     const formData = this.form.value;
     console.log({
@@ -145,7 +144,6 @@ export class FirstFormComponent implements OnInit {
     });
   }
 
-  // Show SweetAlert2 popup
   trySweetalert() {
     Swal.fire('SweetAlert2 is working!');
   }

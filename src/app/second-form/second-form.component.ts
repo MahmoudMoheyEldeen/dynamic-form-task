@@ -98,13 +98,11 @@ export class SecondFormComponent implements OnInit {
     this.getContactDetailArray(studentIndex).removeAt(contactIndex);
   }
 
-  // Handle form submission
   submit(): void {
     const formData = this.form.value;
     console.log(formData);
   }
 
-  // Show SweetAlert2 popup
   trySweetalert() {
     Swal.fire('SweetAlert2 is working!');
   }
