@@ -127,6 +127,14 @@ export class FirstFormComponent implements OnInit {
     this.addAddressGroup();
   }
 
+  removeAddress(index: number): void {
+    this.getAddressDetailArray().removeAt(index);
+  }
+
+  removePhone(index: number): void {
+    this.getPhoneNumbersArray().removeAt(index);
+  }
+
   // Handle form submission
   submit(): void {
     const formData = this.form.value;
