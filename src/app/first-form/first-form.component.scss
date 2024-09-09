@@ -4,6 +4,8 @@
   }
 }
 
+p.id {}
+
 p {
   margin: 0;
 }
@@ -87,6 +89,14 @@ button {
   ;
 }
 
-// .form-container {
-//   overflow: auto;
-// }
+
+@media (max-width:420px) {
+  p.id {
+    font-size: 10px;
+  }
+
+  button.add {
+    font-size: 12px;
+  }
+
+}

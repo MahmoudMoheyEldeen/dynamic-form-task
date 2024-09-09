@@ -4,6 +4,8 @@
   border-radius: 10px;
 }
 
+p.id {}
+
 .three-bigIcons-row {
   p {
     color: var(--primary-color);
@@ -90,5 +92,12 @@ button {
     }
   }
 
-  ;
+
+}
+
+@media(max-width:420px) {
+  p.id {
+    font-size: 12px;
+    margin: 0;
+  }
 }
