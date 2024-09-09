@@ -136,15 +136,12 @@ export class FirstFormComponent implements OnInit {
 
   submit(): void {
     const formData = this.form.value;
-    console.log({
-      ID: formData.ID,
-      addressDetail: formData.addressDetail,
-      StudentName: formData.StudentName,
-      phoneNumbers: formData.phoneNumbers,
-    });
+    console.log(formData);
+    this.form.reset();
+    this.trySweetalert();
   }
 
   trySweetalert() {
-    Swal.fire('SweetAlert2 is working!');
+    Swal.fire('Form submitted succefully');
   }
 }
