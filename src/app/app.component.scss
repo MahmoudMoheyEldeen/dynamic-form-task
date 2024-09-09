@@ -4,7 +4,7 @@
   margin: auto;
   background-color: #fcfcfc;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 .isCollapsed {
@@ -27,7 +27,7 @@
 }
 
 .change-dir-sidebar {
-  transform: translateX(-1260px); ////for translate english
+  transform: translateX(-1230px); ////for translate english
 
 
 }
